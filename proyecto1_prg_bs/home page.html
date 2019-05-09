@@ -1,0 +1,393 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> El Sol - Noticias al día. </title>
+	<meta charset="utf-8" />
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous" />
+    <link href="main.css" rel="stylesheet" />
+    <link href="Content/bootstrap-grid.css" rel="stylesheet" />
+    <link href="Content/bootstrap.css" rel="stylesheet" /> <!--Bootstrap CSS-->
+
+    <script src="scripts/jquery-3.3.1.min.js"></script> <!--JQuery-->
+    <script src="scripts/bootstrap.js"></script> <!--Bootstrap JS-->
+    
+    
+</head>
+<body>
+    <!-- Navigation -->
+
+    <header>
+    <nav class="navbar navbar-expand-sm navbar-light bg-white sticky-top border-bottom"> <!--define un navbar, expand define como debe escalar al llegar a cierto dispositivo, color, posicion fija-->
+        <div class="container">
+            <a class="navbar-brand" href="#"><img src="Resources/logo/logo.png" class="logo"/> </a> <!--Enlace a la pagina principal-->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar_menu"> <!-- Toggle -->
+                <span class="navbar-toggler-icon"></span>
+                </button>
+            <div class="colapse navbar-collapse" id="navbar_menu">
+                <ul class="navbar-nav ml-auto"> <!--ml-auto puja la navegacion hacia la derecha al estar en su maximo tamaño-->
+                    <li class="nav-item active"> <a class="nav-link" href=""> Inicio </a> </li>
+                    <li class="nav-item"> <a class="nav-link" href="tecnologia.html"> Tecnología </a> </li> 
+                    <li class="nav-item"> <a class="nav-link" href="sucesos.html"> Sucesos </a> </li> 
+                    <li class="nav-item"> <a class="nav-link" href="entretenimiento.html"> Entretenimiento </a> </li>
+                    <li class="nav-item"> <a class="nav-link" href="login.html"> Foros </a> </li> 
+                    <li class="nav-item"> <a class="nav-link" href="about us.html"> Acerca de </a> </li>  
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        </header>
+   
+ 
+    <section class="container-fluid mt-3" style="width:80%;">
+        <div class="row h-100">
+            <div class="col-md-12 mb-4 col-lg-9">
+                <!--Carousel Fuente: https://www.youtube.com/watch?v=AvMl3StAju4&t=0s&list=LLLtMaKErvFkBia2Ix0FBiOw&index=3 -->
+                <div id="carousel__noticias" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner" role="listbox">
+
+                        <ol class="carousel-indicators">
+                            <!--indicador del carrousel-->
+
+                            <li data-target="#carousel__noticias" data-slide-to="0" class="active">
+                            <li data-target="#carousel__noticias" data-slide-to="1">
+                            <li data-target="#carousel__noticias" data-slide-to="2">
+                            <li data-target="#carousel__noticias" data-slide-to="3">
+                                <!--Agregar mas <datalist option> genera mas campos-->
+                        </ol>
+
+
+
+                        <div class="carousel-item active">
+                            <img class="d-block" src="Resources/Carousel/Connecturday.jpg" alt="Primera noticia." />
+                            <div class="carousel-caption">
+                                <h1 class="display-2"> La UH busca estudiantes para representarnos en Connecturday </h1>
+                                <h3> Unete al equipo y participa. </h3>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <img class="d-block" src="Resources/Carousel/rogelio_umaña.jpg" alt="Segunda noticia." />
+                            <div class="carousel-caption">
+                                <h1 class="display-2">Apertura o Miedo..</h1>
+                                <h3> Dos Historias ante el cambio </h3>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <img class="d-block" src="Resources/Carousel/revista_concurso.jpg" alt="Segunda noticia." />
+                            <div class="carousel-caption">
+                                <h1 class="display-2">Concurso: Ponele nombre a la revista.</h1>
+                                <h3> ¿Tienes una buena idea? Compártela y gana. </h3>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <img class="d-block" src="Resources/Carousel/prueba_diabetes.jpg" alt="Segunda noticia." />
+                            <div class="carousel-caption">
+                                <h1 class="display-2">2da Jornada de Actualización  de la Diabetes.</h1>
+                                <h3> Realizada por la Escuela de Nutrición de la UH. </h3>
+                            </div>
+                        </div>
+
+                        <!--Controles de Carousel-->
+                        <a class="carousel-control-prev" href="#carousel__noticias" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" />
+                            <span class="sr-only">Previous </span> <!--Indicates only for screen reader only, shows only the icon-->
+                        </a>
+                        <a class="carousel-control-next" href="#carousel__noticias" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" />
+                            <span class="sr-only"> Next </span> <!--Indicates only for screen reader only, shows only the icon-->
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-12-md col-lg-3">
+                <figure class="small_article">
+                    <!--Fuente:https://getbootstrap.com/docs/4.1/content/figures/-->
+                    <img src="Resources/Side News/ping-pong.jpg" class="img-fluid">
+                    <div class="centered_text">
+                        <h4> Estudiantes de Ingieneria dominan torneo de ping-pong </h4>
+                    </div>
+                </figure>
+               <figure class="small_article">
+                    <!--Fuente:https://getbootstrap.com/docs/4.1/content/figures/-->
+                    <img src="Resources/Side News/sim-emp.jpeg" class="img-fluid">
+                    <div class="centered_text">
+                        <h4> Ganadores del concurso de simulacion empresarial. </h4>
+                    </div>
+                </figure>
+            </div>
+        </div>
+
+        <hr class="my-4 mb-4"> 
+        
+        <div class="row">
+
+            <div class="col-mid-12 col-lg-12">
+                <!--Fixed-Background-->
+                <div class="parallax">
+                    <div class="parallax_text">
+                        <h1 class="display-1">Tecnologia</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-3">
+            <div class="d-none d-lg-block col-lg-4">
+                <!--Esconder en pantallas menores de md-->
+                <figure class="small_article">
+                    <img src="Resources/Tec-section/Thumbnails/calendar.jpeg" class="img-fluid">
+                    <div class="centered_text">
+                        <h1> Semana Tecnologica UH. </h1>
+                    </div>
+                </figure>
+
+                <figure class="small_article">
+                    <img src="Resources/Tec-section/Thumbnails/Lab.jpeg" class="img-fluid">
+                    <div class="centered_text">
+                        <h1> Universidad Innova con laboratorios de alta tecnología </h1>
+                    </div>
+                </figure>
+
+            </div>
+
+            <div class="col-md-12 col-lg-4">
+                <figure class="small_article">
+                    <!--Fuente:https://getbootstrap.com/docs/4.1/content/figures/-->
+                    <img src="Resources/Tec-section/Thumbnails/apertura edificio.jpeg" class="img-fluid">
+                    <div class="centered_text">
+                        <h1> Universidad inaugura edificio. </h1>
+                    </div>
+                </figure>
+                <figure class="small_article">
+                    <!--Fuente:https://getbootstrap.com/docs/4.1/content/figures/-->
+                    <img src="Resources/Tec-section/Thumbnails/tecnologia de estudio.jpg" class="img-fluid">
+                    <div class="centered_text">
+                        <h1> La UH exhibe tecnología educativa </h1>
+                    </div>
+                </figure>
+            </div>
+
+            <div class="col-md-12 col-lg-4">
+                <!--Source: https://getbootstrap.com/docs/4.0/components/list-group/-->
+                <div id="li_tecnologia" class="d-none d-lg-block">
+
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item"> <h1 class="display-4 text-center"> Lo de Hoy </h1> </li>
+                        <li class="list-group-item list-group-item-action list-group-item"> Universidad Hispanoamericana abre Centro de Investigación. </li>
+                        <li class="list-group-item list-group-item-action list-group-item"> U. Hispanoamericana busca reducir brecha de género en tecnología.</li>
+                        <li class="list-group-item list-group-item-action list-group-item"> Universidad impartirá seminarios gratuitos sobre Forex, bitcoin y política </li>
+                    </ul>
+                </div>
+                <div style="text-align:center">
+                    <a href="tecnologia.html"  type="button" class="btn btn-dark btn-lg mt-2">Seguir leyendo.</a>
+                </div>
+            </div>
+        </div>
+        <hr class="my-4 mb-4">
+        <div class="row">
+
+            <div class="col-mid-12 col-lg-12">
+                <!--Fixed-Background-->
+                <div class="parallax_sec">
+                    <div class="parallax_text">
+                        <h1 class="display-1">Sucesos</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-3">
+            <div class="d-none d-lg-block col-lg-4">
+                <!--Esconder en pantallas menores de md-->
+                <figure class="small_article">
+                    <img src="Resources/sucesos-section/thumbnails/deportistas.jpeg" class="img-fluid">
+                    <div class="centered_text">
+                        <h1> Asesoria a atletas de Juegos Nacionales. </h1>
+                    </div>
+                </figure>
+
+                <figure class="small_article">
+                    <img src="Resources/sucesos-section/thumbnails/certificar.jpeg" class="img-fluid">
+                    <div class="centered_text">
+                        <h1>Primera acreditación de preescolar bilingüe.</h1>
+                    </div>
+                </figure>
+
+            </div>
+
+            <div class="col-md-12 col-lg-4">
+                <figure class="small_article">
+                    <!--Fuente:https://getbootstrap.com/docs/4.1/content/figures/-->
+                    <img src="Resources/sucesos-section/thumbnails/convenio.jpeg" class="img-fluid">
+                    <div class="centered_text">
+                        <h1>Convenio con roma beneficia a estudiantes.</h1>
+                    </div>
+                </figure>
+                <figure class="small_article">
+                    <!--Fuente:https://getbootstrap.com/docs/4.1/content/figures/-->
+                    <img src="Resources/sucesos-section/thumbnails/tutorias.jpeg" class="img-fluid">
+                    <div class="centered_text">
+                        <h1> Tutorias para bachillerato en Llorente. </h1>
+                    </div>
+                </figure>
+            </div>
+
+            <div class="col-md-12 col-lg-4">
+                <!--Source: https://getbootstrap.com/docs/4.0/components/list-group/-->
+                <div id="li_tecnologia" class="d-none d-lg-block">
+
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item"> <h1 class="display-4 text-center"> Lo de Hoy </h1> </li>
+                        <li class="list-group-item list-group-item-action list-group-item"> Universidad Hispanoamericana abrirá centro de posgrados en Tibás. </li>
+                        <li class="list-group-item list-group-item-action list-group-item"> ‘U’ Hispanoamericana se alía con universidad estadounidense. </li>
+                        <li class="list-group-item list-group-item-action list-group-item"> Universidad Hispanoamericana apoyará Feria de Salud del INA.</li>
+                        <li class="list-group-item list-group-item-action list-group-item"> U Hispanoamericana inauguró centro de atención psicológica gratuita.</li>
+                    </ul>
+                </div>
+                <div style="text-align:center">
+                    <a href="sucesos.html" type="button" class="btn btn-dark btn-lg mt-2">Seguir leyendo.</a>
+                </div>
+            </div>
+        </div>
+        <hr class="my-4 mb-4">
+        <div class="row">
+
+            <div class="col-mid-12 col-lg-12">
+                <!--Fixed-Background-->
+                <div class="parallax_ent">
+                    <div class="parallax_text">
+                        <h1 class="display-1">Entretenimiento</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-3">
+            <div class="d-none d-lg-block col-lg-4">
+                <!--Esconder en pantallas menores de md-->
+                <figure class="small_article">
+                    <img src="Resources/ent-section/thumbnails/jogo fair.jpeg" class="img-fluid">
+                    <div class="centered_text">
+                        <h1> Busqueda de haunted fair termina. </h1>
+                    </div>
+                </figure>
+
+                <figure class="small_article">
+                    <img src="Resources/ent-section/thumbnails/semana u.jpeg" class="img-fluid">
+                    <div class="centered_text">
+                        <h1>Inicia la semana U!</h1>
+                    </div>
+                </figure>
+
+            </div>
+
+            <div class="col-md-12 col-lg-4">
+                <figure class="small_article">
+                    <!--Fuente:https://getbootstrap.com/docs/4.1/content/figures/-->
+                    <img src="Resources/ent-section/thumbnails/connecturday.jpeg" class="img-fluid">
+                    <div class="centered_text">
+                        <h1>Se buscan estudiantes para Connecturday.</h1>
+                    </div>
+                </figure>
+                <figure class="small_article">
+                    <!--Fuente:https://getbootstrap.com/docs/4.1/content/figures/-->
+                    <img src="Resources/ent-section/thumbnails/photobooth.jpeg" class="img-fluid">
+                    <div class="centered_text">
+                        <h1> Album de photobooth de la UH. </h1>
+                    </div>
+                </figure>
+            </div>
+
+            <div class="col-md-12 col-lg-4">
+                <!--Source: https://getbootstrap.com/docs/4.0/components/list-group/-->
+                <div id="li_tecnologia" class="d-none d-lg-block">
+
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item"> <h1 class="display-4 text-center"> Lo de Hoy </h1> </li>
+                        <li class="list-group-item list-group-item-action list-group-item"> Semana del Corazón. </li>
+                        <li class="list-group-item list-group-item-action list-group-item">Segunda edición de los  Domingos en Cleta UH”! </li>
+                        <li class="list-group-item list-group-item-action list-group-item"> Campeonato de football de Ciencias de la Salud de la UH!</li>
+                    </ul>
+                </div>
+                <div style="text-align:center">
+                    <a href="entretenimiento.html" type="button" class="btn btn-dark btn-lg mt-2">Seguir leyendo.</a>
+                </div>
+            </div>
+        </div>
+
+        <!--  Redes sociales -->
+
+        <hr class="my-4 mb-4">
+        <div class="container-fluid">
+            <div class="row text-center">
+                <div class="col-md-12 col-lg-12">
+                    <h1 class="display-4">Redes Sociales</h1>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12 col-lg-12 social padding text-center">
+                    <a href="#"><i class="fab fa-facebook-square"></i></a>
+                    <a href="#"><i class="fab fa-twitter-square"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+
+  
+    </section>
+ 
+    
+    <!--Footer-->
+    <footer>
+        <section class="container-fluid">
+            <div class="row">
+                <div class="col-md-4 col-lg-4 text-center">
+                    <hr class="light">
+                    <p> <h5>Contacto</h5> </p>
+                    <hr class="light">
+                    <p> 8340-5919</p>
+                    <p> Jeremy Zelaya Rodriguez.</p>
+                    <p> Universidad Hispanoamericana.</p>
+                    </div>
+                <div class="col-md-4 col-lg-4 text-center">
+                    <hr class="light">
+                    <p> <h5>Horas de Atencion</h5> </p>
+                    <hr class="light">
+                    <p> Lunes - Viernes: 7am - 8pm.</p>
+                    <p> Sabado: 9am - 4pm.</p>
+                    <p> Universidad Hispanoamericana.</p>
+                </div>
+                <div class="col-md-4 col-lg-4 text-center">
+                    <hr class="light">
+                    <p> <h5>Proyecto de Programacion 3 </h5></p>
+                    <hr class="light">
+                    <p> Pagina web.</p>
+                    <p> Horario: Martes 6pm - 9pm.</p>
+                    <p> Estudiante: Jeremy Zelaya Rodriguez.</p>
+                    
+                </div>
+
+                
+                </div>
+            
+            </section>
+        </footer>
+
+    
+    
+
+ 
+     
+</body>
+</html>
