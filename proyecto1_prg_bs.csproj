@@ -1,0 +1,324 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C4CFF1BF-5F0D-4955-8887-738BC747BF35}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>proyecto1_prg_bs</RootNamespace>
+    <AssemblyName>proyecto1_prg_bs</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TypeScriptToolsVersion>1.8</TypeScriptToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.AI.Agent.Intercept, Version=1.2.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.1.2.1\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.DependencyCollector, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.DependencyCollector.2.0.0\lib\net45\Microsoft.AI.DependencyCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.PerfCounterCollector, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.PerfCounterCollector.2.0.0\lib\net45\Microsoft.AI.PerfCounterCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.ServerTelemetryChannel, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.2.0.0\lib\net45\Microsoft.AI.ServerTelemetryChannel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Web.2.0.0\lib\net45\Microsoft.AI.Web.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.WindowsServer, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.2.0.0\lib\net45\Microsoft.AI.WindowsServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationInsights, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.2.0.0\lib\net45\Microsoft.ApplicationInsights.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="about us.html" />
+    <Content Include="acreditacion.html" />
+    <Content Include="Campeonato de football de Ciencias de la Salud de la UH!.html" />
+    <Content Include="connecturday.html" />
+    <Content Include="convenio_roma.html" />
+    <Content Include="entretenimiento.html" />
+    <Content Include="contacto.html" />
+    <Content Include="haunted fair.html" />
+    <Content Include="La UH exhibe tecnología educativa.html" />
+    <Content Include="login.html" />
+    <Content Include="main.css" />
+    <Content Include="Asesoria a atletas de Juegos Nacionales.html" />
+    <Content Include="packages.config" />
+    <Content Include="ApplicationInsights.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="photobooth UH.html" />
+    <Content Include="Resources\about ut\pexels-photo-1438081.jpeg" />
+    <Content Include="Resources\Carousel\building.jpeg" />
+    <Content Include="Resources\Carousel\calendar_carousel.jpeg" />
+    <Content Include="Resources\Carousel\Connecturday.jpg" />
+    <Content Include="Resources\Carousel\lab.jpeg" />
+    <Content Include="Resources\Carousel\photo_booth.jpeg" />
+    <Content Include="Resources\Carousel\prueba_diabetes.jpg" />
+    <Content Include="Resources\Carousel\revista_concurso.jpg" />
+    <Content Include="Resources\Carousel\rogelio_umaña.jpg" />
+    <Content Include="Resources\Carousel\tutorias.jpeg" />
+    <Content Include="Resources\ent-section\thumbnails\connecturday.jpeg" />
+    <Content Include="Resources\ent-section\thumbnails\jogo fair.jpeg" />
+    <Content Include="Resources\ent-section\thumbnails\photobooth.jpeg" />
+    <Content Include="Resources\ent-section\thumbnails\semana u.jpeg" />
+    <Content Include="Resources\Fixed_bg\entretenimiento_bg.jpeg" />
+    <Content Include="Resources\Fixed_bg\secesos_bg.jpeg" />
+    <Content Include="Resources\Fixed_bg\technology_bg.jpg" />
+    <Content Include="Resources\login\adult-books-campus-159775.jpg" />
+    <Content Include="Resources\Logo\logo.png" />
+    <Content Include="Resources\Logo\logo_large.jpeg" />
+    <Content Include="Resources\Noticias\Entretenimiento\campeonato.jpg" />
+    <Content Include="Resources\Noticias\Entretenimiento\domingos en cleta\domingo cleta %281%29.jpg" />
+    <Content Include="Resources\Noticias\Entretenimiento\domingos en cleta\domingo cleta %282%29.jpg" />
+    <Content Include="Resources\Noticias\Entretenimiento\domingos en cleta\domingo cleta %283%29.jpg" />
+    <Content Include="Resources\Noticias\Entretenimiento\domingos en cleta\domingo cleta %284%29.jpg" />
+    <Content Include="Resources\Noticias\Entretenimiento\domingos en cleta\domingo cleta %285%29.jpg" />
+    <Content Include="Resources\Noticias\Entretenimiento\haunted fair.png" />
+    <Content Include="Resources\Noticias\Entretenimiento\Photobooth\photobooth %281%29.jpg" />
+    <Content Include="Resources\Noticias\Entretenimiento\Photobooth\photobooth %282%29.jpg" />
+    <Content Include="Resources\Noticias\Entretenimiento\Photobooth\photobooth %283%29.jpg" />
+    <Content Include="Resources\Noticias\Entretenimiento\Photobooth\photobooth %284%29.jpg" />
+    <Content Include="Resources\Noticias\Entretenimiento\Photobooth\photobooth %285%29.jpg" />
+    <Content Include="Resources\Noticias\Entretenimiento\Photobooth\photobooth %286%29.jpg" />
+    <Content Include="Resources\Noticias\Entretenimiento\Photobooth\photobooth %287%29.jpg" />
+    <Content Include="Resources\Noticias\Entretenimiento\semanaU\escalante.jpg" />
+    <Content Include="Resources\Noticias\Entretenimiento\semanaU\heredia.jpg" />
+    <Content Include="Resources\Noticias\Entretenimiento\semanaU\aranjuez.jpg" />
+    <Content Include="Resources\Noticias\Entretenimiento\semanaU\puntarenas.jpg" />
+    <Content Include="Resources\Noticias\Entretenimiento\semanaU\llorente.jpg" />
+    <Content Include="Resources\Noticias\Entretenimiento\semana_u.jpg" />
+    <Content Include="Resources\Noticias\sucesos\acreditacion.jpg" />
+    <Content Include="Resources\Noticias\sucesos\asesoria.jpg" />
+    <Content Include="Resources\Noticias\sucesos\roma.jpg" />
+    <Content Include="Resources\Noticias\sucesos\tutorias.jpg" />
+    <Content Include="Resources\Noticias\sucesos\u_estados.jpg" />
+    <Content Include="Resources\Noticias\Tecnologia\201504082116430.PAG 2 UH %28 Esteban%29 .jpg" />
+    <Content Include="Resources\Noticias\Tecnologia\brech_gen.jpg" />
+    <Content Include="Resources\Noticias\Tecnologia\centro_edu.jpg" />
+    <Content Include="Resources\Noticias\Tecnologia\laboratorios_img.jpg" />
+    <Content Include="Resources\Noticias\Tecnologia\semana_tec.jpg" />
+    <Content Include="Resources\Noticias\Tecnologia\tec_educativa.jpg" />
+    <Content Include="Resources\Side News\ping-pong.jpg" />
+    <Content Include="Resources\Side News\sim-emp.jpeg" />
+    <Content Include="Resources\sucesos-section\thumbnails\certificar.jpeg" />
+    <Content Include="Resources\sucesos-section\thumbnails\convenio.jpeg" />
+    <Content Include="Resources\sucesos-section\thumbnails\deportistas.jpeg" />
+    <Content Include="Resources\sucesos-section\thumbnails\tutorias.jpeg" />
+    <Content Include="Resources\Tec-section\Thumbnails\apertura edificio.jpeg" />
+    <Content Include="Resources\Tec-section\Thumbnails\calendar.jpeg" />
+    <Content Include="Resources\Tec-section\Thumbnails\Lab.jpeg" />
+    <Content Include="Resources\Tec-section\Thumbnails\tecnologia de estudio.jpg" />
+    <Content Include="scripts\bootstrap.min.js.map" />
+    <Content Include="scripts\bootstrap.js.map" />
+    <Content Include="scripts\bootstrap.bundle.min.js.map" />
+    <Content Include="scripts\bootstrap.bundle.js.map" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-reboot.min.css.map" />
+    <Content Include="Content\bootstrap-reboot.css.map" />
+    <Content Include="Content\bootstrap-grid.min.css.map" />
+    <Content Include="Content\bootstrap-grid.css.map" />
+    <Content Include="scripts\jquery-3.3.1.slim.min.map" />
+    <Content Include="scripts\jquery-3.3.1.min.map" />
+    <Content Include="Segunda edición Domingos en Cleta UH.html" />
+    <Content Include="semana_tec.html" />
+    <Content Include="semana_u.html" />
+    <Content Include="Tutorias para bachillerato en Llorente.html" />
+    <Content Include="U. Hispanoamericana busca reducir brecha de género en tecnología.html">
+      <BrowseToURL>U. Hispanoamericana busca reducir brecha de género en tecnología.html</BrowseToURL>
+    </Content>
+    <Content Include="‘U’ Hispanoamericana se alía con universidad estadounidense.html" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap-grid.css" />
+    <Content Include="Content\bootstrap-grid.min.css" />
+    <Content Include="Content\bootstrap-reboot.css" />
+    <Content Include="Content\bootstrap-reboot.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Global.asax" />
+    <Content Include="index.html" />
+    <Content Include="Resources\Actividad Puntarenas.jpg" />
+    <Content Include="Resources\Chepe se baña 1.jpg" />
+    <Content Include="Resources\Conferencia.jpg" />
+    <Content Include="Resources\Conferencia_thumbnail.png" />
+    <Content Include="Resources\Noticias\Entretenimiento\Connecturday.jpg" />
+    <Content Include="Resources\Hallowen UH.jpg" />
+    <Content Include="Resources\Hogar ancianos%2810%29.jpg" />
+    <Content Include="Resources\Hogar ancianos%2811%29.jpg" />
+    <Content Include="Resources\Hogar ancianos%286%29.jpg" />
+    <Content Include="Resources\Hogar ancianos%287%29.jpg" />
+    <Content Include="Resources\Hogar ancianos%288%29.jpg" />
+    <Content Include="Resources\Hogar ancianos%289%29.jpg" />
+    <Content Include="Resources\Hogar de Ancianos San Antonio 1.jpg" />
+    <Content Include="Resources\Jornada de Actualización Diabetes.jpg" />
+    <Content Include="Resources\logo.png" />
+    <Content Include="Resources\Mind Bender Challenger.jpg" />
+    <Content Include="Resources\ping pong.jpg" />
+    <Content Include="Resources\Preparacion-Bachillerato.jpg" />
+    <Content Include="Resources\Semana Tec UH Heredia.jpg" />
+    <Content Include="Resources\Semana Tec.jpg" />
+    <Content Include="Resources\UH congreso de Tecnología e Innovación.jpg" />
+    <Content Include="Resources\weather.png" />
+    <Content Include="scripts\bootstrap.bundle.js" />
+    <Content Include="scripts\bootstrap.bundle.min.js" />
+    <Content Include="scripts\bootstrap.js" />
+    <Content Include="scripts\bootstrap.min.js" />
+    <Content Include="scripts\esm\popper-utils.js" />
+    <Content Include="scripts\esm\popper-utils.min.js" />
+    <Content Include="scripts\esm\popper.js" />
+    <Content Include="scripts\esm\popper.min.js" />
+    <Content Include="scripts\esm\popper.min.js.map" />
+    <Content Include="scripts\esm\popper.js.map" />
+    <Content Include="scripts\esm\popper-utils.min.js.map" />
+    <Content Include="scripts\esm\popper-utils.js.map" />
+    <None Include="scripts\jquery-3.3.1.intellisense.js" />
+    <Content Include="scripts\jquery-3.3.1.js" />
+    <Content Include="scripts\jquery-3.3.1.min.js" />
+    <Content Include="scripts\jquery-3.3.1.slim.js" />
+    <Content Include="scripts\jquery-3.3.1.slim.min.js" />
+    <Content Include="scripts\umd\popper-utils.js" />
+    <Content Include="scripts\umd\popper-utils.min.js" />
+    <Content Include="scripts\umd\popper.js" />
+    <Content Include="scripts\umd\popper.min.js" />
+    <Content Include="sucesos.html" />
+    <Content Include="tecnologia.html" />
+    <Content Include="Universidad Hispanoamericana abre Centro de Investigación.html" />
+    <Content Include="Universidad Hispanoamericana abrirá centro de posgrados en Tibás.html" />
+    <Content Include="Universidad Innova con laboratorios de alta tecnología.html">
+      <BrowseToURL>~/Universidad Innova con laboratorios de alta tecnología.html</BrowseToURL>
+    </Content>
+    <Content Include="universidad_inaugura_edificio.html" />
+    <Content Include="Web.config" />
+    <Content Include="scripts\umd\popper.min.js.map" />
+    <Content Include="scripts\umd\popper.js.map" />
+    <Content Include="scripts\umd\popper-utils.min.js.map" />
+    <Content Include="scripts\umd\popper-utils.js.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Models\" />
+    <Folder Include="Noticias\Entretenimiento\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>3128</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:3128/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
